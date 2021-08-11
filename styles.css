@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+*,
+*:before,
+*:after {
+  box-sizing: border-box; 
+}
+
+  :root {
+    --veryDarkCyan: hsl(183, 100%, 15%);
+    --varkGrayishCyanPrimary: hsl(186, 14%, 43%);
+    --darkGrayishCyanSecondary: hsl(184, 14%, 56%);
+    --lightGrayishCyanPrimary: hsl(185, 41%, 84%);
+    --lightGrayishCyanSecondary: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+}
+
+
+body {
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    background-color: var(--lightGrayishCyanPrimary);
+}
+
+.heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: .5rem;
+    color: var(--varkGrayishCyanPrimary);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--white);
+    width: 60vw;
+    padding: 1rem;
+    position: absolute;
+    top: 25%;
+    border-radius: 20px;
+}
+
+.container-input {
+    width: 50%;
+    padding: 1rem;
+}
+
+
+.input-image {
+    height: 50px;
+    width: 50px;
+}
+
+.label-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--darkGrayishCyanSecondary);
+    display: block;
+}
+
+.container-result {
+    background-color: var(--veryDarkCyan);
+    border-radius: 20px;
+    width: 50%;
+    padding: 1rem;
+}
+
+.input-section {
+   background-color: var(--lightGrayishCyanSecondary);
+    outline: none;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 3px;
+    text-align: right;
+    color: #00474b;
+    margin-top: 1rem;
+   width: 100%;
+   
+}
+
+.dollar {
+    background-image: url('images/icon-dollar.svg');
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position-y: 7px;
+    background-position-x: 7px;
+}
+
+.people {
+    background-image: url('images/icon-person.svg');
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position-y: 7px;
+    background-position-x: 7px;
+}
+
+.button-group {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.btn-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+::before, 
+.btn{
+    
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1.25rem;
+    background-color: var(--veryDarkCyan);
+    color: var(--white);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+   display: inline-block;
+   text-align: center;
+   padding: .5rem;
+   width: 30%;
+   margin-bottom: 10px;
+    margin-top: 1rem;
+
+}
+
+::after,
+.btn:active
+{
+    background-color: #26c0ab;
+    
+}
+
+.custom {
+    background-color: var(--lightGrayishCyanSecondary);
+    color: var(--darkGrayishCyanSecondary);
+    outline: none;
+}
+
+::after,
+.custom:active {
+    background-color:var(--lightGrayishCyanSecondary); ;
+}
+
+
+
+.tip-total {
+    display: block;
+}
+
+.result-header {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--white);
+    display: inline-block;
+}
+
+.result-person {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--darkGrayishCyanSecondary);
+}
+
+.result {
+    font-size: 2rem;
+    display: block;
+    text-align: right;
+    color:  #26c0ab;;
+    font-weight: 700;
+    transform: translateY(-3.25rem);
+    position: relative;
+}
+
+.reset-btn {
+    background-color: #26c0ab;
+    color: var(--veryDarkCyan);
+    font-weight: 700;
+    font-size: 1.25rem;
+    width: 100%;
+    display: inline;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    text-transform: uppercase;
+    padding: 1rem;
+    margin-top: 7rem;
+    cursor: pointer;
+}
+
+.reset-btn:active {
+    background-color: var(--varkGrayishCyanPrimary);
+}
+
+.warning {
+   font-size: 1rem;
+    color: red;
+    display: none;
+}
+
+@media screen and (max-width:1200px) {
+
+    .btn {
+        width: 45%;
+    }
+
+}
+
+
+
+@media screen and (max-width:750px) {
+    .container {
+       width: 100%;
+       display: table-column;
+       align-items: center;
+    }
+
+    .container-input {
+        width: 100%;
+    }
+
+    .btn {
+        width: 45%;
+        
+    }
+
+    .container-result {
+        width: 95%;
+        margin-left: 1rem;
+    }
+
+
+    
+    
+}
+
