@@ -31,14 +31,14 @@
     <div class="button-group">
       <span class="label-title">Select Tip %</span>
       
-        <button class="btn" value=".5">5%</button>
-        <button class="btn" value=".10">10%</button>
-        <button class="btn" value=".15">15%</button>
+        <button onClick="fivePercent()" id=".05" class="btn" value=".05">5%</button>
+        <button onClick="tenPercent()" id=".10" class="btn" value=".10">10%</button>
+        <button onClick="fifteenPercent()" id=".15" class="btn" value=".15">15%</button>
       
       
-        <button class="btn" value=".25">25%</button>
-        <button class="btn" value=".50">50%</button>
-        <input type="number" min="0" placeholder="custom" class="btn custom">
+        <button onClick="twentyFivePercent()" id=".25" class="btn" value=".25">25%</button>
+        <button onClick="fiftyPercent()" id=".50" class="btn" value=".50">50%</button>
+        <input id="custom" type="number" min="0" placeholder="custom" class="btn custom">
       
       
     </div>
@@ -47,7 +47,7 @@
       
       <label class="label-title" for="people">Number of People</label>
       <span class="warning">Number cannot be zero</span>
-      <input class="input-section people" id="people" type="number" placeholder="0" min="0" value="numberOfPeople">
+      <input class="input-section people" id="people" type="number" placeholder="Number of people" min="1" value="1">
     </div>  
       
     
@@ -64,7 +64,6 @@
 
     <div class="tip-total">
       <span class="result-header">Total</span>
-      
       <span class="result-person">/ person</span>
       <span class="result"><span>$</span>0.00</span>
     </div>
