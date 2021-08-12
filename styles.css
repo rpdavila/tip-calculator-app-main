@@ -73,7 +73,7 @@ body {
 
 .input-section {
    background-color: var(--lightGrayishCyanSecondary);
-    outline: none;
+    
     font-family: inherit;
     font-weight: 700;
     font-size: 1.5rem;
@@ -153,6 +153,17 @@ body {
     background-color:var(--lightGrayishCyanSecondary); ;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 
 
 .tip-total {
@@ -206,7 +217,8 @@ body {
 .warning {
    font-size: 1rem;
     color: red;
-    display: none;
+   display: block;
+   text-align: right;
 }
 
 @media screen and (max-width:1200px) {
