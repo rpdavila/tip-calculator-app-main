@@ -54,3 +54,11 @@ function totalHandler(e) {
 }
 
 document.addEventListener("change", totalHandler);
+
+function resetHandler() {
+    bill.value = 0
+    people.value = 1
+    totalAmount.innerHTML = '$0.00'
+    tipTotal.innerHTML = '$0.00'
+    custom.value = '';
+}
