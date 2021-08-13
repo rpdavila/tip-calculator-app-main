@@ -8,8 +8,9 @@ const b15percent = document.getElementById(".15");
 const b25percent = document.getElementById(".25");
 const b50percent = document.getElementById(".50");
 const custom = document.getElementById("custom");
+const tipTotal = document.getElementById("tiptotal");
+const totalAmount = document.getElementById("totalamount");
 
-let billValue = bill.value
 let tipValue = {
     fivePercent: b5percent.value,
     tenPercent: b10percent.value,
@@ -18,27 +19,38 @@ let tipValue = {
     fiftyPercent: b50percent.value
 }
 
-function fivePercent() {
-    
-    document.getElementsByClassName("result").innerHTML = billValue * tipValue.fivePercent;  
+
+function fivePercent() { 
+    tipTotal.innerHTML = "$" + ((bill.value * tipValue.fivePercent) / people.value).toFixed(2);  
 }
 
 function tenPercent() {
-    console.log(billValue * tipValue.tenPercent)   
+    tipTotal.innerHTML = "$" + ((bill.value * tipValue.tenPercent) / people.value).toFixed(2);    
 }
 
 function fifteenPercent() {
-    console.log(billValue * tipValue.fifteenPercent)   
+    tipTotal.innerHTML = "$" + ((bill.value * tipValue.fifteenPercent) / people.value).toFixed(2);   
 }
 
 function twentyFivePercent() {
-    console.log(billValue * tipValue.twentyfivePercent)   
+    tipTotal.innerHTML = "$" + ((bill.value * tipValue.twentyfivePercent) / people.value).toFixed(2);   
 }
 
 function fiftyPercent() {
-    console.log(billValue * tipValue.fiftyPercent)   
+    tipTotal.innerHTML = "$" + ((bill.value * tipValue.fiftyPercent) / people.value).toFixed(2);  
 }
 
 function customValue() {
-    console.log(billValue * custom.value)
+    tipTotal.innerHTML = "$" + ((bill.value * (custom.value / 100)) / people.value).toFixed(2);
 }
+
+
+function totalHandler(e) {
+    e.preventDefault()
+    let billValue = bill.value;
+    let peopleValue = people.value;
+    let result = billValue / peopleValue;
+    totalAmount.innerHTML = `$${result.toFixed(2)}`;
+}
+
+document.addEventListener("change", totalHandler);

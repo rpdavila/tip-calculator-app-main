@@ -26,7 +26,7 @@
       
       <input class="input-section dollar" id="bill" type="number" min="0" placeholder="0.00" value="0" >
     </form>
-      
+
 
     <div class="button-group">
       <span class="label-title">Select Tip %</span>
@@ -38,39 +38,33 @@
       
         <button onClick="twentyFivePercent()" id=".25" class="btn" value=".25">25%</button>
         <button onClick="fiftyPercent()" id=".50" class="btn" value=".50">50%</button>
-        <input id="custom" type="number" min="0" placeholder="custom" class="btn custom">
+        <input oninput="customValue()" id="custom" type="number" min="0" placeholder="custom" class="btn custom">
       
       
     </div>
-      
+
     <div class="form-group">
       
       <label class="label-title" for="people">Number of People</label>
       <span class="warning">Number cannot be zero</span>
-      <input class="input-section people" id="people" type="number" placeholder="Number of people" min="1" value="1">
-    </div>  
-      
-    
-      
+      <input class="input-section people" id="people" type="number" placeholder="1" min="1" value="1">
+    </div> 
+
     </div>
     <div class="container-result">
-    <div class="tip-total">
-      <span class="result-header">Tip Amount</span>
-      <span class="result-person">/ person</span>
-      <span class="result"><span>$</span>0.00</span>
-      
-    </div>
+      <div class="tip-total">
+        <span class="result-header">Tip Amount</span>
+        <span class="result-person">/ person</span>
+        <span id="tiptotal" class="result">$0.00</span>
+        
+      </div>
    
 
-    <div class="tip-total">
-      <span class="result-header">Total</span>
-      <span class="result-person">/ person</span>
-      <span class="result"><span>$</span>0.00</span>
-    </div>
-    
-     
-
-  
+      <div class="tip-total">
+        <span class="result-header">Total</span>
+        <span class="result-person">/ person</span>
+        <span id="totalamount" class="result">$0.00</span>
+      </div>
 
   <button class="reset-btn">Reset</button>
     </div>
