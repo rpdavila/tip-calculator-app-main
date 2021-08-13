@@ -39,7 +39,8 @@ body {
     justify-content: center;
     align-content: center;
     background-color: var(--white);
-    width: 60vw;
+    width: 70%;
+    
     padding: 1rem;
     position: absolute;
     top: 25%;
@@ -73,7 +74,8 @@ body {
 
 .input-section {
    background-color: var(--lightGrayishCyanSecondary);
-    outline: none;
+    outline-color: lightgreen;
+    
     font-family: inherit;
     font-weight: 700;
     font-size: 1.5rem;
@@ -145,12 +147,23 @@ body {
 .custom {
     background-color: var(--lightGrayishCyanSecondary);
     color: var(--darkGrayishCyanSecondary);
-    outline: none;
+    
 }
 
 ::after,
 .custom:active {
     background-color:var(--lightGrayishCyanSecondary); ;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 
@@ -203,10 +216,11 @@ body {
     background-color: var(--varkGrayishCyanPrimary);
 }
 
-.warning {
+#warning {
    font-size: 1rem;
     color: red;
-    display: none;
+   display: none;
+   text-align: right;
 }
 
 @media screen and (max-width:1200px) {
