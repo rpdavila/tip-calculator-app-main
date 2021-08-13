@@ -9,6 +9,8 @@ const b50percent = document.getElementById(".50");
 const custom = document.getElementById("custom");
 const tipTotal = document.getElementById("tiptotal");
 const totalAmount = document.getElementById("totalamount");
+let buttons = document.querySelectorAll('.btn');
+
 let tipValue = {
     fivePercent: b5percent.value,
     tenPercent: b10percent.value,
@@ -18,10 +20,15 @@ let tipValue = {
 }
 
 
+
+
 function fivePercent() { 
     tipTotal.innerHTML = "$" + ((bill.value * tipValue.fivePercent) / people.value).toFixed(2);
 }
 
+function tenPercent() {
+    tipTotal.innerHTML = "$" + ((bill.value * tipValue.tenPercent) / people.value).toFixed(2);
+}
 
 function fifteenPercent() {
     tipTotal.innerHTML = "$" + ((bill.value * tipValue.fifteenPercent) / people.value).toFixed(2);
@@ -41,13 +48,23 @@ function customValue() {
 
 
 
+
+
 function totalHandler() {
-  
+    
     let billValue = bill.value;
     let peopleValue = people.value;
     let result = billValue / peopleValue;
     
     totalAmount.innerHTML = `$${result.toFixed(2)}`;
+    if(peopleValue === "0") {
+        document.getElementById('people').style.outlineColor = 'red';
+        document.getElementById('warning').style.display = 'block'
+        totalAmount.innerHTML ='$0.00'
+    } else {
+        document.getElementById('people').style.outlineColor = 'lightGreen';
+        document.getElementById('warning').style.display = 'none'
+    }
 }
 
 document.addEventListener("change", totalHandler);

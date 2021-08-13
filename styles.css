@@ -39,7 +39,8 @@ body {
     justify-content: center;
     align-content: center;
     background-color: var(--white);
-    width: 60vw;
+    width: 70%;
+    
     padding: 1rem;
     position: absolute;
     top: 25%;
@@ -73,6 +74,7 @@ body {
 
 .input-section {
    background-color: var(--lightGrayishCyanSecondary);
+    outline-color: lightgreen;
     
     font-family: inherit;
     font-weight: 700;
@@ -145,7 +147,7 @@ body {
 .custom {
     background-color: var(--lightGrayishCyanSecondary);
     color: var(--darkGrayishCyanSecondary);
-    outline: none;
+    
 }
 
 ::after,
@@ -214,10 +216,10 @@ input[type=number] {
     background-color: var(--varkGrayishCyanPrimary);
 }
 
-.warning {
+#warning {
    font-size: 1rem;
     color: red;
-   display: block;
+   display: none;
    text-align: right;
 }
 
