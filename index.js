@@ -22,9 +22,6 @@ function fivePercent() {
     tipTotal.innerHTML = "$" + ((bill.value * tipValue.fivePercent) / people.value).toFixed(2);
 }
 
-function tenPercent() {
-    tipTotal.innerHTML = "$" + ((bill.value * tipValue.tenPercent) / people.value).toFixed(2);
-}
 
 function fifteenPercent() {
     tipTotal.innerHTML = "$" + ((bill.value * tipValue.fifteenPercent) / people.value).toFixed(2);
